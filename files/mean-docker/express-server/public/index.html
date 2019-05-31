@@ -1,0 +1,73 @@
+<!doctype html>
+
+<!-- ASSIGN OUR ANGULAR MODULE -->
+<html ng-app="meanTodo">
+<head>
+	<!-- META -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"><!-- Optimize mobile viewport -->
+
+	<title>华工银行</title>
+
+	<!-- SCROLLS -->
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"><!-- load bootstrap -->
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+	<style>
+		html 					{ overflow-y:scroll; }
+		body 					{ padding-top:50px; }
+		#todo-list 				{ margin-bottom:30px; }
+		#todo-form 	 			{ margin-bottom:50px; }
+	</style>
+
+
+
+
+
+	<script src="//cdn.bootcss.com/angular.js/1.2.16/angular.min.js"></script><!-- load angular -->
+
+	<script src="js/controllers/main.js"></script> <!-- load up our controller -->
+	<script src="js/services/todos.js"></script> <!-- load our todo service -->
+	<script src="js/services/clients.js"></script> <!-- load our todo service -->
+	<script src="js/services/fmbfs.js"></script> <!-- load our todo service -->
+	<script src="js/core.js"></script> <!-- load our main application -->
+
+</head>
+<!-- SET THE CONTROLLER -->
+<body ng-controller="mainController">
+	<div class="container">
+
+		<!-- HEADER AND TODO COUNT -->
+		<div class="jumbotron text-center">
+			<h1>Banking Login</h1>
+		</div>
+		<h1 id="test1">{{FLAG}}  
+			</h1>
+
+		<!-- FORM TO CREATE TODOS -->
+		<div id="todo-form" class="row">
+			<div class="col-sm-8 col-sm-offset-2 text-center">
+				<form style="display: flex;flex-direction: column;justify-content: center;align-items: center">
+					<div class="form-group">
+
+						<!-- BIND THIS VALUE TO formData.text IN ANGULAR -->
+						<input type="text" class="form-control input-lg text-center" placeholder="Account Number" ng-model="input.client_id">
+
+
+
+						<input type="text" class="form-control input-lg text-center " placeholder="User Password" ng-model="input.password">
+
+
+					</div>
+
+					<!-- createToDo() WILL CREATE NEW TODOS -->
+					<button  type="submit" class="btn btn-primary btn-lg" style="width: 100px"  ng-click="check(input)">{{FLAG}}</button>
+					<h1 style="display: none; font-size:16px;color:red" id="false-code">账号或密码错误</h1>
+				</form>
+			</div>
+		</div>
+		<div class="text-center text-muted">
+			<p>With ❤ from <a href="https://www.ibm.com/linuxone">LinuxONE</a> and<a href="https://www.scut.edu.cn/new/">Scuters</a></p>
+		</div>
+	</div>
+</body>
+</html>
