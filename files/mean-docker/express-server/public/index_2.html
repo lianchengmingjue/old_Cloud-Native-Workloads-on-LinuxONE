@@ -67,11 +67,11 @@
           var x = document.getElementById("image").getAttribute("src");
           if (x=="../image/03s.jpg"){
               document.getElementById("image").src="../image/04s.png";
-              document.getElementById("balance").value="******";
+              document.getElementById('balance').innerHTML = "******";
           }
           else{
               document.getElementById("image").src="../image/03s.jpg";
-               document.getElementById("balance").value="{{account.balance}}";
+              document.getElementById('balance').innerHTML = "{{account.balance}}";
           }
           //alert(x);
     } 
@@ -93,7 +93,7 @@
 			
 			<h1 id="balance">******
 				</h1>
-	<button  class="btn btn-primary btn-lg" onclick="change()"><img id="image" src="../image/03.jpg" width="50px" height="50px"></button>
+	<button  class="btn btn-primary btn-lg" onclick="change()"><img id="image" src="../image/04s.png" width="50px" height="50px"></button>
 		</div>
 
 				<!-- FORM TO CREATE TODOS -->
@@ -160,8 +160,8 @@
 								<img src="../image/01.jpg" width="200px" height="200px" >
 								<div class="textarea1">
 									 产品代码：119395<br>
-									 发售起始日期：2019-06-05 10:00	<br>
-									 产品到期日：2019-08-22 <br>
+									 发售起始日期：2019-05-31 <br>
+									 产品到期日：2019-06-29 <br>
 									 投资类型：固定收益型<br>
 									 销售渠道：网上，手机，PAD，网点<br>
 								</div>
@@ -183,7 +183,7 @@
 											</div>
 											 <div class="tab-1-container-1">
 											<button class="btn btn-primary btn-lg" onclick="window.location.reload('index_2.html');" type="submit" ng-click="createTodo()">转入</button>
-											<button class="btn btn-primary btn-lg" onclick="window.location.reload('index_2.html');" type="submit" ng-click="createTodo()">转出</button>
+											<!--<button class="btn btn-primary btn-lg" onclick="window.location.reload('index_2.html');" type="submit" ng-click="createTodo()">转出</button>-->
 								</div>
 									</div>
 					</div>
@@ -193,8 +193,8 @@
 								<img src="../image/02.jpg" width="200px" height="200px" >
 								<div class="textarea1">
 									 产品代码：119392<br>
-									 发售起始日期：2019-06-05 10:00<br>
-									 产品到期日：2019-07-25<br>
+									 发售起始日期：2019-05-31<br>
+									 产品到期日：2019-08-28<br>
 									 投资类型：固定收益型<br>
 									 销售渠道：网上，手机，PAD，网点<br>
 								</div>
@@ -217,7 +217,7 @@
 											 </div>
 											<div class="tab-1-container-1">
 											<button class="btn btn-primary btn-lg" onclick="window.location.reload('index_2.html');" type="submit" ng-click="createTodo()">转入</button>
-											<button class="btn btn-primary btn-lg" onclick="window.location.reload('index_2.html');" type="submit" ng-click="createTodo()">转出</button>
+											<!--<button class="btn btn-primary btn-lg" onclick="window.location.reload('index_2.html');" type="submit" ng-click="createTodo()">转出</button>-->
 								</div>
 									</div>
 					</div>
